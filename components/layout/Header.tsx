@@ -94,7 +94,7 @@ export function Header() {
 
       <div
         className={`fixed inset-0 top-20 z-40 flex flex-col bg-ink transition-transform duration-300 ease-out lg:hidden ${
-          menuOpen ? "translate-x-0" : "translate-x-full"
+          menuOpen ? "[transform:translateX(0)]" : "[transform:translateX(100%)]"
         }`}
       >
         <nav className="flex flex-1 flex-col gap-1 px-6 pt-6">
