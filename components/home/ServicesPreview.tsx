@@ -27,7 +27,7 @@ export function ServicesPreview() {
           </Button>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-3">
           {preview.map((service, index) => {
             const Icon = Icons[service.icon] as Icons.LucideIcon;
             return (
@@ -36,19 +36,22 @@ export function ServicesPreview() {
                   href={`/services#${service.slug}`}
                   className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm shadow-black/[0.03] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange-900/10"
                 >
-                  <div className="relative h-52 w-full overflow-hidden">
+                  <div className="relative aspect-square w-full overflow-hidden sm:aspect-auto sm:h-52">
                     <Image
                       src={service.image}
                       alt={service.title}
                       fill
-                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 50vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <span className="absolute left-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/95 text-orange-500 shadow-md">
+                    <span className="absolute left-4 top-4 hidden h-10 w-10 items-center justify-center rounded-full bg-white/95 text-orange-500 shadow-md sm:flex">
                       <Icon className="h-5 w-5" />
                     </span>
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 sm:hidden">
+                      <p className="text-xs font-semibold text-white">{service.title}</p>
+                    </div>
                   </div>
-                  <div className="flex flex-1 flex-col p-6">
+                  <div className="hidden flex-1 flex-col p-6 sm:flex">
                     <h3 className="text-lg font-semibold text-slate-900">{service.title}</h3>
                     <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
                       {service.shortDescription}

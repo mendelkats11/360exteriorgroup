@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/Button";
 import { ServiceCard } from "@/components/services/ServiceCard";
-import { coreServices, featuredService } from "@/lib/services";
+import { services } from "@/lib/services";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -45,16 +45,10 @@ export default function ServicesPage() {
         <div className="pointer-events-none absolute -right-32 top-1/2 h-80 w-80 rounded-full bg-orange-200/35 blur-3xl" />
         <div className="pointer-events-none absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-orange-200/40 blur-3xl" />
         <Container className="relative">
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {coreServices.map((service) => (
+          <div className="grid grid-cols-2 gap-3 sm:gap-8 lg:grid-cols-3">
+            {services.map((service) => (
               <ServiceCard key={service.slug} service={service} />
             ))}
-          </div>
-
-          <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="hidden lg:block" aria-hidden />
-            <ServiceCard service={featuredService} />
-            <div className="hidden lg:block" aria-hidden />
           </div>
         </Container>
       </section>

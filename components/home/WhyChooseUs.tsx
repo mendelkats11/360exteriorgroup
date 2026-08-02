@@ -47,15 +47,15 @@ export function WhyChooseUs() {
           description="From the first phone call to the final walkthrough, we make it easy to trust us with your home."
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-3">
           {reasons.map((reason, index) => (
             <FadeIn key={reason.title} delay={index * 0.08}>
-              <div className="group h-full rounded-2xl border border-slate-100 bg-white p-8 shadow-sm shadow-black/[0.03] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange-900/5">
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-50 text-orange-500 transition-colors duration-300 group-hover:bg-orange-500 group-hover:text-white">
-                  <reason.icon className="h-6 w-6" />
+              <div className="group h-full rounded-2xl border border-slate-100 bg-white p-4 shadow-sm shadow-black/[0.03] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange-900/5 sm:p-8">
+                <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-orange-50 text-orange-500 transition-colors duration-300 group-hover:bg-orange-500 group-hover:text-white sm:h-12 sm:w-12">
+                  <reason.icon className="h-4 w-4 sm:h-6 sm:w-6" />
                 </span>
-                <h3 className="mt-6 text-lg font-semibold text-slate-900">{reason.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">{reason.description}</p>
+                <h3 className="mt-3 text-sm font-semibold text-slate-900 sm:mt-6 sm:text-lg">{reason.title}</h3>
+                <p className="mt-1.5 text-xs leading-relaxed text-slate-600 sm:mt-2 sm:text-sm">{reason.description}</p>
               </div>
             </FadeIn>
           ))}
