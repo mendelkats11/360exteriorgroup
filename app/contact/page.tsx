@@ -37,14 +37,23 @@ export default function ContactPage() {
         </FadeIn>
       </PageHero>
 
-      <section className="relative overflow-hidden bg-white py-20">
-        <div className="pointer-events-none absolute -right-40 top-0 h-96 w-96 rounded-full bg-orange-200/50 blur-3xl" />
-        <div className="pointer-events-none absolute -left-32 bottom-0 h-80 w-80 rounded-full bg-orange-200/45 blur-3xl" />
+      <section className="relative overflow-hidden bg-ink py-20">
+        <div className="pointer-events-none absolute -right-40 top-0 h-96 w-96 rounded-full bg-orange-500/20 blur-3xl" />
+        <div className="pointer-events-none absolute -left-32 bottom-0 h-80 w-80 rounded-full bg-amber-400/15 blur-3xl" />
         <Container className="relative">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-5">
-            <FadeIn className="rounded-3xl border-2 border-slate-200 bg-white p-8 shadow-sm shadow-black/[0.03] lg:col-span-3 sm:p-10">
-              <h2 className="text-2xl font-bold text-slate-900">Request a Free Quote</h2>
-              <p className="mt-2 text-slate-600">
+            <FadeIn className="rounded-3xl border-2 border-white/10 bg-white/5 p-8 shadow-sm shadow-black/20 lg:col-span-3 sm:p-10">
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <h2 className="text-2xl font-bold text-white">Request a Free Quote</h2>
+                <span className="inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold text-emerald-300">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+                  </span>
+                  We respond quickly
+                </span>
+              </div>
+              <p className="mt-2 text-slate-300">
                 Tell us a bit about your project and we&apos;ll follow up within one business day.
               </p>
               <div className="mt-8">

@@ -22,6 +22,7 @@ export function PageHero({
         className="object-cover"
       />
       <div className="absolute inset-0 bg-ink/60" />
+      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-amber-400/50 to-transparent" />
       <Container className="relative">{children}</Container>
     </section>
   );

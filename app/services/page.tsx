@@ -40,10 +40,10 @@ export default function ServicesPage() {
         </FadeIn>
       </PageHero>
 
-      <section className="relative overflow-hidden bg-slate-50 py-24">
-        <div className="pointer-events-none absolute -left-40 top-0 h-96 w-96 rounded-full bg-orange-200/45 blur-3xl" />
-        <div className="pointer-events-none absolute -right-32 top-1/2 h-80 w-80 rounded-full bg-orange-200/35 blur-3xl" />
-        <div className="pointer-events-none absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-orange-200/40 blur-3xl" />
+      <section className="relative overflow-hidden bg-ink-light py-24">
+        <div className="pointer-events-none absolute -left-40 top-0 h-96 w-96 rounded-full bg-orange-500/20 blur-3xl" />
+        <div className="pointer-events-none absolute -right-32 top-1/2 h-80 w-80 rounded-full bg-amber-400/15 blur-3xl" />
+        <div className="pointer-events-none absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-orange-500/15 blur-3xl" />
         <Container className="relative">
           <div className="grid grid-cols-2 gap-3 sm:gap-8 lg:grid-cols-3">
             {services.map((service) => (
@@ -53,9 +53,9 @@ export default function ServicesPage() {
         </Container>
       </section>
 
-      <section className="relative overflow-hidden bg-white py-20">
-        <div className="pointer-events-none absolute -right-32 bottom-0 h-72 w-72 rounded-full bg-orange-200/50 blur-3xl" />
-        <div className="pointer-events-none absolute -left-24 top-0 h-64 w-64 rounded-full bg-orange-100/50 blur-3xl" />
+      <section className="relative overflow-hidden bg-ink py-20">
+        <div className="pointer-events-none absolute -right-32 bottom-0 h-72 w-72 rounded-full bg-orange-500/20 blur-3xl" />
+        <div className="pointer-events-none absolute -left-24 top-0 h-64 w-64 rounded-full bg-amber-400/15 blur-3xl" />
         <Container className="relative">
           <SectionHeading title="Not sure which service you need?" />
           <FadeIn delay={0.1} className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">

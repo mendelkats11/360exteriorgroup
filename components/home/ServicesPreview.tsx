@@ -12,8 +12,8 @@ export function ServicesPreview() {
   const preview = services.slice(0, 6);
 
   return (
-    <section className="relative overflow-hidden bg-white py-24">
-      <div className="pointer-events-none absolute -left-32 bottom-0 h-80 w-80 rounded-full bg-orange-100/60 blur-3xl" />
+    <section className="relative overflow-hidden bg-ink-light py-24">
+      <div className="pointer-events-none absolute -left-32 bottom-0 h-80 w-80 rounded-full bg-orange-500/20 blur-3xl" />
       <Container className="relative">
         <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
           <SectionHeading
@@ -34,7 +34,7 @@ export function ServicesPreview() {
               <FadeIn key={service.slug} delay={index * 0.06}>
                 <Link
                   href={`/services#${service.slug}`}
-                  className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm shadow-black/[0.03] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange-900/10"
+                  className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-sm shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl hover:shadow-orange-500/10"
                 >
                   <div className="relative aspect-square w-full overflow-hidden sm:aspect-auto sm:h-52">
                     <Image
@@ -52,11 +52,11 @@ export function ServicesPreview() {
                     </div>
                   </div>
                   <div className="hidden flex-1 flex-col p-6 sm:flex">
-                    <h3 className="text-lg font-semibold text-slate-900">{service.title}</h3>
-                    <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
+                    <h3 className="text-lg font-semibold text-white">{service.title}</h3>
+                    <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-300">
                       {service.shortDescription}
                     </p>
-                    <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-orange-500">
+                    <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-orange-400">
                       Learn More
                       <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                     </span>

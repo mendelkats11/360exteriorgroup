@@ -4,7 +4,7 @@ import { siteConfig } from "@/lib/site-config";
 export function ContactInfo() {
   return (
     <div className="h-full">
-      <div className="rounded-3xl bg-ink p-8 text-white sm:p-10">
+      <div className="rounded-3xl border border-amber-400/30 bg-ink p-8 text-white shadow-lg shadow-amber-500/5 sm:p-10">
         <h3 className="text-xl font-semibold">Contact Information</h3>
         <ul className="mt-6 flex flex-col gap-5">
           <li className="flex items-start gap-3">
@@ -63,7 +63,7 @@ export function ContactInfo() {
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <a
             href={siteConfig.phone.href}
-            className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-orange-500 px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-orange-600"
+            className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-amber-400 px-5 py-3 text-sm font-bold text-ink transition-all duration-300 hover:-translate-y-0.5"
           >
             <Phone className="h-4 w-4" />
             Call Now

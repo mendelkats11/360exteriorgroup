@@ -38,10 +38,10 @@ export default function GalleryPage() {
         </FadeIn>
       </PageHero>
 
-      <section className="relative overflow-hidden bg-white py-20">
-        <div className="pointer-events-none absolute -right-40 top-0 h-96 w-96 rounded-full bg-orange-200/45 blur-3xl" />
-        <div className="pointer-events-none absolute -left-40 top-[40%] h-96 w-96 rounded-full bg-orange-200/35 blur-3xl" />
-        <div className="pointer-events-none absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-orange-200/40 blur-3xl" />
+      <section className="relative overflow-hidden bg-ink py-20">
+        <div className="pointer-events-none absolute -right-40 top-0 h-96 w-96 rounded-full bg-orange-500/20 blur-3xl" />
+        <div className="pointer-events-none absolute -left-40 top-[40%] h-96 w-96 rounded-full bg-amber-400/12 blur-3xl" />
+        <div className="pointer-events-none absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-orange-500/15 blur-3xl" />
         <Container className="relative">
           <GalleryGrid images={images} />
         </Container>

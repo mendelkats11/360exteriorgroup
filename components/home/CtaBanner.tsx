@@ -8,7 +8,7 @@ export function CtaBanner() {
   return (
     <section className="relative overflow-hidden bg-ink py-20">
       <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-orange-500/20 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-orange-500/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-amber-400/15 blur-3xl" />
       <Container className="relative">
         <FadeIn className="flex flex-col items-center gap-8 text-center">
           <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">

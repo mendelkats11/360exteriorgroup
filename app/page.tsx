@@ -8,6 +8,7 @@ import { Process } from "@/components/home/Process";
 import { Testimonials } from "@/components/home/Testimonials";
 import { ServiceArea } from "@/components/home/ServiceArea";
 import { CtaBanner } from "@/components/home/CtaBanner";
+import { MobileFloatingCta } from "@/components/home/MobileFloatingCta";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -33,6 +34,8 @@ export default function HomePage() {
       <Testimonials />
       <ServiceArea />
       <CtaBanner />
+      <div className="h-20 lg:hidden" aria-hidden />
+      <MobileFloatingCta />
     </>
   );
 }

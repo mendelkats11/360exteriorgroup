@@ -41,7 +41,7 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
             key={image.src}
             type="button"
             onClick={() => setActiveIndex(index)}
-            className="group relative mb-5 block w-full break-inside-avoid overflow-hidden rounded-2xl bg-slate-100 shadow-sm shadow-black/[0.03] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-orange-900/10"
+            className="group relative mb-5 block w-full break-inside-avoid overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-sm shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl hover:shadow-orange-500/10"
             style={{ aspectRatio: image.aspect }}
             aria-label="Open image in lightbox"
           >

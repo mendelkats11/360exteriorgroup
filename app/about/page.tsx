@@ -69,29 +69,29 @@ export default function AboutPage() {
         </FadeIn>
       </PageHero>
 
-      <section className="relative overflow-hidden bg-white py-24">
-        <div className="pointer-events-none absolute -right-40 top-0 h-96 w-96 rounded-full bg-orange-100/55 blur-3xl" />
-        <div className="pointer-events-none absolute -left-32 bottom-0 h-80 w-80 rounded-full bg-orange-100/50 blur-3xl" />
+      <section className="relative overflow-hidden bg-ink py-24">
+        <div className="pointer-events-none absolute -right-40 top-0 h-96 w-96 rounded-full bg-orange-500/20 blur-3xl" />
+        <div className="pointer-events-none absolute -left-32 bottom-0 h-80 w-80 rounded-full bg-amber-400/15 blur-3xl" />
         <Container className="relative">
           <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
             <FadeIn>
-              <span className="inline-flex items-center rounded-full bg-orange-50 px-4 py-1.5 text-sm font-semibold tracking-wide text-orange-600">
+              <span className="inline-flex items-center rounded-full border border-orange-500/20 bg-orange-500/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-orange-400">
                 Who We Are
               </span>
-              <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 A local team, right at your doorstep
               </h2>
-              <p className="mt-5 text-lg leading-relaxed text-slate-600">
+              <p className="mt-5 text-lg leading-relaxed text-slate-300">
                 360 Exterior Group has proudly served Toronto and surrounding areas for over{" "}
                 {siteConfig.yearsInBusiness} years. We are a mobile exterior cleaning company that
                 comes directly to your home, bringing professional-grade equipment and expertise
                 right to your doorstep.
               </p>
-              <p className="mt-4 text-lg leading-relaxed text-slate-600">We pride ourselves on:</p>
+              <p className="mt-4 text-lg leading-relaxed text-slate-300">We pride ourselves on:</p>
               <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {commitments.map((item) => (
-                  <li key={item} className="flex items-start gap-2.5 text-sm font-medium text-slate-700">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-orange-500" />
+                  <li key={item} className="flex items-start gap-2.5 text-sm font-medium text-slate-300">
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-orange-400" />
                     {item}
                   </li>
                 ))}
@@ -99,9 +99,9 @@ export default function AboutPage() {
             </FadeIn>
 
             <FadeIn delay={0.15} className="relative">
-              <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[2.5rem] bg-orange-200/45 blur-2xl" />
-              <div className="pointer-events-none absolute -bottom-8 -right-8 -z-10 h-40 w-40 rounded-full bg-orange-300/40 blur-2xl" />
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-xl shadow-orange-900/10">
+              <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[2.5rem] bg-orange-500/25 blur-2xl" />
+              <div className="pointer-events-none absolute -bottom-8 -right-8 -z-10 h-40 w-40 rounded-full bg-amber-400/20 blur-2xl" />
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-white/10 shadow-xl shadow-black/40">
                 <Image
                   src="/images/20260319_167711.png"
                   alt="360 Exterior Group technician pressure washing a roofline in Toronto"
@@ -115,14 +115,14 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="relative overflow-hidden bg-slate-50 py-24">
-        <div className="pointer-events-none absolute left-1/2 top-0 h-72 w-[32rem] -translate-x-1/2 rounded-full bg-orange-200/35 blur-3xl" />
+      <section className="relative overflow-hidden bg-ink-light py-24">
+        <div className="pointer-events-none absolute left-1/2 top-0 h-72 w-[32rem] -translate-x-1/2 rounded-full bg-amber-400/15 blur-3xl" />
         <Container className="relative">
           <div className="relative mx-auto max-w-3xl">
-            <div className="pointer-events-none absolute -inset-10 -z-10 rounded-[3rem] bg-orange-300/35 blur-3xl" />
-            <div className="pointer-events-none absolute -bottom-10 -left-10 -z-10 h-52 w-52 rounded-full bg-orange-200/40 blur-2xl" />
-            <div className="pointer-events-none absolute -top-10 -right-10 -z-10 h-52 w-52 rounded-full bg-orange-200/40 blur-2xl" />
-            <FadeIn className="rounded-3xl bg-ink px-8 py-14 text-center sm:px-16">
+            <div className="pointer-events-none absolute -inset-10 -z-10 rounded-[3rem] bg-orange-500/20 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-10 -left-10 -z-10 h-52 w-52 rounded-full bg-amber-400/15 blur-2xl" />
+            <div className="pointer-events-none absolute -top-10 -right-10 -z-10 h-52 w-52 rounded-full bg-orange-500/15 blur-2xl" />
+            <FadeIn className="rounded-3xl border border-orange-500/20 bg-ink px-8 py-14 text-center sm:px-16">
               <span className="inline-flex items-center rounded-full bg-white/10 px-4 py-1.5 text-sm font-semibold text-white ring-1 ring-white/20">
                 Our Mission
               </span>
@@ -135,9 +135,9 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="relative overflow-hidden bg-white py-24">
-        <div className="pointer-events-none absolute -left-40 bottom-0 h-96 w-96 rounded-full bg-orange-100/55 blur-3xl" />
-        <div className="pointer-events-none absolute -right-32 top-0 h-80 w-80 rounded-full bg-orange-100/45 blur-3xl" />
+      <section className="relative overflow-hidden bg-ink py-24">
+        <div className="pointer-events-none absolute -left-40 bottom-0 h-96 w-96 rounded-full bg-orange-500/20 blur-3xl" />
+        <div className="pointer-events-none absolute -right-32 top-0 h-80 w-80 rounded-full bg-amber-400/15 blur-3xl" />
         <Container className="relative">
           <SectionHeading eyebrow="Our Values" title="What drives everything we do" />
           <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -148,15 +148,15 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="relative overflow-hidden bg-slate-50 py-24">
-        <div className="pointer-events-none absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-orange-200/45 blur-3xl" />
-        <div className="pointer-events-none absolute -left-32 top-0 h-72 w-72 rounded-full bg-orange-100/40 blur-3xl" />
+      <section className="relative overflow-hidden bg-ink-light py-24">
+        <div className="pointer-events-none absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-orange-500/20 blur-3xl" />
+        <div className="pointer-events-none absolute -left-32 top-0 h-72 w-72 rounded-full bg-amber-400/15 blur-3xl" />
         <Container className="relative">
           <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
             <FadeIn delay={0.1} className="relative order-2 lg:order-1">
-              <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[2.5rem] bg-orange-200/45 blur-2xl" />
-              <div className="pointer-events-none absolute -top-8 -left-8 -z-10 h-40 w-40 rounded-full bg-orange-300/40 blur-2xl" />
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-xl shadow-orange-900/10">
+              <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[2.5rem] bg-orange-500/25 blur-2xl" />
+              <div className="pointer-events-none absolute -top-8 -left-8 -z-10 h-40 w-40 rounded-full bg-amber-400/20 blur-2xl" />
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-white/10 shadow-xl shadow-black/40">
                 <Image
                   src="/images/20260406_167390.png"
                   alt="A beautifully maintained home exterior cleaned by 360 Exterior Group"
@@ -167,13 +167,13 @@ export default function AboutPage() {
               </div>
             </FadeIn>
             <FadeIn className="order-1 lg:order-2">
-              <span className="inline-flex items-center rounded-full bg-orange-50 px-4 py-1.5 text-sm font-semibold tracking-wide text-orange-600">
+              <span className="inline-flex items-center rounded-full border border-orange-500/20 bg-orange-500/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-orange-400">
                 Why Customers Choose Us
               </span>
-              <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 Trusted results, every single visit
               </h2>
-              <p className="mt-5 text-lg leading-relaxed text-slate-600">
+              <p className="mt-5 text-lg leading-relaxed text-slate-300">
                 Homeowners across the GTA choose 360 Exterior Group because we combine premium
                 results with a genuinely easy, stress-free experience. From transparent pricing to
                 punctual, courteous technicians, we treat every property like our own.

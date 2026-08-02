@@ -32,8 +32,10 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        scrolled ? "bg-ink/95 shadow-lg shadow-black/10 backdrop-blur-sm" : "bg-ink"
+      className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${
+        scrolled
+          ? "border-amber-400/20 bg-ink/95 shadow-lg shadow-black/20 backdrop-blur-sm"
+          : "border-transparent bg-ink"
       }`}
     >
       <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6 sm:px-8 lg:px-10">
@@ -74,7 +76,7 @@ export function Header() {
           </Link>
           <a
             href={siteConfig.phone.href}
-            className="inline-flex items-center gap-2 rounded-full bg-orange-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-orange-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-orange-600 hover:shadow-xl"
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-amber-400 px-5 py-2.5 text-sm font-bold text-ink shadow-lg shadow-orange-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
           >
             <Phone className="h-4 w-4" />
             Call Now
@@ -116,7 +118,7 @@ export function Header() {
         <div className="flex flex-col gap-3 border-t border-white/10 px-6 py-6">
           <a
             href={siteConfig.phone.href}
-            className="flex w-full items-center justify-center gap-2 rounded-full bg-orange-500 px-5 py-4 text-base font-semibold text-white shadow-lg shadow-orange-500/20 transition-colors hover:bg-orange-600"
+            className="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-amber-400 px-5 py-4 text-base font-bold text-ink shadow-lg shadow-orange-500/20 transition-colors"
           >
             <Phone className="h-5 w-5" />
             Call Now: {siteConfig.phone.display}

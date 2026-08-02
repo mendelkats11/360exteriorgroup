@@ -28,8 +28,8 @@ const steps = [
 
 export function Process() {
   return (
-    <section className="relative overflow-hidden bg-white py-24">
-      <div className="pointer-events-none absolute left-1/2 top-0 h-80 w-[36rem] -translate-x-1/2 rounded-full bg-orange-100/55 blur-3xl" />
+    <section className="relative overflow-hidden bg-ink py-24">
+      <div className="pointer-events-none absolute left-1/2 top-0 h-80 w-[36rem] -translate-x-1/2 rounded-full bg-amber-400/15 blur-3xl" />
       <Container className="relative">
         <SectionHeading
           eyebrow="Our Process"
@@ -40,15 +40,15 @@ export function Process() {
         <div className="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, index) => (
             <FadeIn key={step.title} delay={index * 0.08}>
-              <div className="relative flex h-full flex-col items-center rounded-2xl bg-slate-50 p-8 text-center">
-                <span className="absolute -top-4 flex h-8 w-8 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white shadow-lg shadow-orange-500/30">
+              <div className="relative flex h-full flex-col items-center rounded-2xl border border-white/10 bg-white/5 p-8 text-center">
+                <span className="absolute -top-4 flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-amber-400 text-sm font-bold text-ink shadow-lg shadow-orange-500/30">
                   {index + 1}
                 </span>
-                <span className="mt-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-50 text-orange-500">
+                <span className="mt-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-500/10 text-orange-400">
                   <step.icon className="h-7 w-7" />
                 </span>
-                <h3 className="mt-5 text-base font-semibold text-slate-900">{step.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">{step.description}</p>
+                <h3 className="mt-5 text-base font-semibold text-white">{step.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-300">{step.description}</p>
               </div>
             </FadeIn>
           ))}

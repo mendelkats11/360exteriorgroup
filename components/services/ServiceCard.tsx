@@ -14,7 +14,7 @@ export function ServiceCard({ service, className = "" }: { service: Service; cla
   return (
     <div
       id={service.slug}
-      className={`group flex h-full scroll-mt-28 flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm shadow-black/[0.03] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-orange-900/10 ${className}`}
+      className={`group flex h-full scroll-mt-28 flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-sm shadow-black/20 transition-all duration-300 hover:-translate-y-1.5 hover:border-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/10 ${className}`}
     >
       <div className="relative aspect-square w-full shrink-0 overflow-hidden sm:aspect-auto sm:h-56">
         <Image
@@ -31,8 +31,8 @@ export function ServiceCard({ service, className = "" }: { service: Service; cla
       </div>
 
       <div className="flex flex-col p-4 sm:p-7">
-        <h3 className="text-sm font-semibold text-slate-900 sm:text-xl">{service.title}</h3>
-        <p className="mt-1.5 text-xs leading-relaxed text-slate-600 sm:mt-3 sm:text-sm">
+        <h3 className="text-sm font-semibold text-white sm:text-xl">{service.title}</h3>
+        <p className="mt-1.5 text-xs leading-relaxed text-slate-300 sm:mt-3 sm:text-sm">
           {service.shortDescription}
         </p>
 
@@ -42,7 +42,7 @@ export function ServiceCard({ service, className = "" }: { service: Service; cla
           }`}
         >
           <div className="overflow-hidden">
-            <p className="text-xs leading-relaxed text-slate-600 sm:text-sm">{service.description}</p>
+            <p className="text-xs leading-relaxed text-slate-300 sm:text-sm">{service.description}</p>
           </div>
         </div>
 
@@ -50,7 +50,7 @@ export function ServiceCard({ service, className = "" }: { service: Service; cla
           type="button"
           onClick={() => setExpanded((v) => !v)}
           aria-expanded={expanded}
-          className="mt-2 inline-flex w-fit items-center gap-1 text-xs font-semibold text-orange-600 transition-colors hover:text-orange-700 sm:mt-3 sm:text-sm"
+          className="mt-2 inline-flex w-fit items-center gap-1 text-xs font-semibold text-orange-400 transition-colors hover:text-orange-300 sm:mt-3 sm:text-sm"
         >
           {expanded ? "Show Less" : "Read More"}
           <ChevronDown
@@ -60,7 +60,7 @@ export function ServiceCard({ service, className = "" }: { service: Service; cla
 
         <Link
           href={`/contact?service=${service.slug}`}
-          className="mt-3 inline-flex w-fit items-center gap-1.5 rounded-full bg-orange-50 px-3 py-1.5 text-xs font-semibold text-orange-600 transition-all duration-300 hover:bg-orange-500 hover:text-white sm:mt-4 sm:px-5 sm:py-2.5 sm:text-sm"
+          className="mt-3 inline-flex w-fit items-center gap-1.5 rounded-full bg-orange-500/10 px-3 py-1.5 text-xs font-semibold text-orange-400 transition-all duration-300 hover:bg-gradient-to-r hover:from-orange-500 hover:to-amber-400 hover:text-ink sm:mt-4 sm:px-5 sm:py-2.5 sm:text-sm"
         >
           Learn More
           <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1 sm:h-4 sm:w-4" />

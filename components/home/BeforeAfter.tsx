@@ -5,7 +5,8 @@ import { FadeIn } from "@/components/ui/FadeIn";
 
 export function BeforeAfter() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-orange-50/40 to-slate-50 py-24">
+    <section className="relative overflow-hidden bg-ink py-24">
+      <div className="pointer-events-none absolute left-1/2 top-0 h-72 w-[40rem] -translate-x-1/2 rounded-full bg-orange-500/15 blur-3xl" />
       <Container className="relative">
         <SectionHeading
           eyebrow="Real Results"
@@ -14,7 +15,7 @@ export function BeforeAfter() {
         />
 
         <FadeIn className="mt-14" delay={0.1}>
-          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl shadow-2xl shadow-orange-900/10">
+          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl border border-white/10 shadow-2xl shadow-black/40">
             <div className="relative aspect-[4/3] w-full sm:aspect-[16/9]">
               <Image
                 src="/images/20260512_168095.png"
