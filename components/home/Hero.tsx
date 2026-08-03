@@ -1,12 +1,28 @@
+"use client";
+
 import Image from "next/image";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Phone, ShieldCheck, Star } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { Button } from "@/components/ui/Button";
 
 export function Hero() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+
+  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
+  const collageY = useTransform(scrollYProgress, [0, 1], ["0%", "-10%"]);
+  const glowY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "12%"]);
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.9], [1, 0]);
+
   return (
-    <section className="relative overflow-hidden bg-ink py-10 sm:py-14 lg:py-10">
-      <div className="absolute inset-0">
+    <section ref={sectionRef} className="relative overflow-hidden bg-ink py-10 sm:py-14 lg:py-10">
+      <motion.div style={{ y: bgY }} className="absolute inset-0 scale-110">
         <Image
           src="/images/20260301_162013.png"
           alt=""
@@ -16,12 +32,21 @@ export function Hero() {
           sizes="100vw"
           className="object-cover opacity-[0.14] grayscale"
         />
-      </div>
+      </motion.div>
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink/40 via-ink/70 to-ink" />
-      <div className="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full bg-orange-500/25 blur-3xl" />
-      <div className="pointer-events-none absolute -right-24 top-1/3 h-96 w-96 rounded-full bg-amber-400/15 blur-3xl" />
+      <motion.div
+        style={{ y: glowY }}
+        className="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full bg-orange-500/25 blur-3xl"
+      />
+      <motion.div
+        style={{ y: glowY }}
+        className="pointer-events-none absolute -right-24 top-1/3 h-96 w-96 rounded-full bg-amber-400/15 blur-3xl"
+      />
 
-      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-6 sm:px-8 lg:grid-cols-2 lg:gap-8 lg:px-10">
+      <motion.div
+        style={{ y: contentY, opacity: contentOpacity }}
+        className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-6 sm:px-8 lg:grid-cols-2 lg:gap-8 lg:px-10"
+      >
         <div className="animate-fade-in-up">
           <span className="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-sm font-semibold text-orange-300 backdrop-blur-sm">
             Residential &amp; Commercial Exterior Cleaning
@@ -65,7 +90,10 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto aspect-square w-full max-w-lg animate-fade-in-up sm:max-w-xl lg:mx-0 lg:max-w-2xl">
+        <motion.div
+          style={{ y: collageY }}
+          className="relative mx-auto aspect-square w-full max-w-lg animate-fade-in-up sm:max-w-xl lg:mx-0 lg:max-w-2xl"
+        >
           <div className="absolute -inset-4 -z-10 rounded-[2.5rem] bg-gradient-to-br from-orange-500/30 via-amber-400/10 to-transparent blur-2xl" />
 
           <div className="absolute left-0 top-0 z-10 h-[74%] w-[74%] overflow-hidden rounded-[1.75rem] shadow-2xl shadow-black/40 ring-4 ring-white/90">
@@ -99,7 +127,7 @@ export function Hero() {
             />
           </div>
 
-          <div className="absolute -bottom-6 left-1/2 z-40 flex -translate-x-1/2 items-center gap-3 whitespace-nowrap rounded-2xl border border-white/10 bg-ink-light/95 px-5 py-4 shadow-xl shadow-black/40 backdrop-blur-sm">
+          <div className="absolute bottom-6 left-1/2 z-40 flex -translate-x-1/2 items-center gap-3 whitespace-nowrap rounded-2xl border border-white/10 bg-ink-light/95 px-5 py-4 shadow-xl shadow-black/40 backdrop-blur-sm sm:bottom-8">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-amber-400 text-ink">
               <ShieldCheck className="h-5 w-5" />
             </span>
@@ -108,8 +136,8 @@ export function Hero() {
               <p className="mt-1 text-xs text-slate-400">{siteConfig.yearsInBusiness}+ years serving the GTA</p>
             </div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

@@ -9,6 +9,8 @@ import { Testimonials } from "@/components/home/Testimonials";
 import { ServiceArea } from "@/components/home/ServiceArea";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { MobileFloatingCta } from "@/components/home/MobileFloatingCta";
+import { ScrollProgressBar } from "@/components/ui/ScrollProgressBar";
+import { BackToTop } from "@/components/ui/BackToTop";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -25,6 +27,8 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
+      <ScrollProgressBar />
+      <BackToTop />
       <Hero />
       <TrustSignals />
       <WhyChooseUs />
