@@ -6,8 +6,8 @@ export const siteConfig = {
     "Professional window cleaning, eavestrough cleaning, and exterior washing services across Toronto and surrounding areas. Licensed, insured, and locally owned.",
   url: "https://www.360exterior.ca",
   phone: {
-    display: "(416) 555-0142",
-    href: "tel:+14165550142",
+    display: "(647) 704-1548",
+    href: "tel:+16477041548",
   },
   email: "info@360exterior.ca",
   address: {
