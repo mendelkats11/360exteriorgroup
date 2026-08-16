@@ -32,7 +32,7 @@ export function Button({
   onClick?: () => void;
   type?: "button" | "submit";
 }) {
-  const classes = `inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-base font-semibold transition-all duration-300 ease-out ${variantClasses[variant]} ${className}`;
+  const classes = `inline-flex cursor-pointer items-center justify-center gap-2 rounded-full px-6 py-3.5 text-base font-semibold transition-all duration-300 ease-out ${variantClasses[variant]} ${className}`;
 
   if (href) {
     return (

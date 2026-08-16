@@ -114,17 +114,19 @@ export function ContactForm() {
           name="serviceArea"
           required
           defaultValue=""
-          className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-orange-400 focus:ring-2 focus:ring-orange-500/20"
+          className="cursor-pointer rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-orange-400 focus:ring-2 focus:ring-orange-500/20"
         >
-          <option value="" disabled>
+          <option value="" disabled className="bg-ink-light text-slate-900">
             Select your area
           </option>
           {siteConfig.serviceAreas.map((area) => (
-            <option key={area} value={area}>
+            <option key={area} value={area} className="bg-white text-slate-900">
               {area}
             </option>
           ))}
-          <option value="Other">Other</option>
+          <option value="Other" className="bg-white text-slate-900">
+            Other
+          </option>
         </select>
       </div>
 
@@ -155,7 +157,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-amber-400 px-6 py-4 text-base font-bold text-ink shadow-lg shadow-orange-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-orange-500/30 disabled:cursor-not-allowed disabled:opacity-70"
+        className="mt-2 inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-amber-400 px-6 py-4 text-base font-bold text-ink shadow-lg shadow-orange-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-orange-500/30 disabled:cursor-not-allowed disabled:opacity-70"
       >
         {status === "submitting" ? (
           <>

@@ -57,7 +57,7 @@ function esc(string $value): string
 $toList = array_values(array_filter(array_map('trim', explode(',', $toEmailsRaw))));
 
 $payload = json_encode([
-    'from' => '360 Exterior Group Website <onboarding@resend.dev>',
+    'from' => '360 Exterior Group Website <quotes@360exterior.ca>',
     'to' => $toList,
     'reply_to' => $email,
     'subject' => 'New Quote Request from ' . $name,
